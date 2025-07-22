@@ -1,6 +1,8 @@
 :root {
     --text-color: #707070;
+    --heading-text-color: #1F1F1F;
     --pink-color: #FF136F;
+    --light-pink-color: #FEEAE9;
 }
 
 * {
@@ -12,7 +14,27 @@
     display: flex;
 }
 
+/* shared style */
+
+.primary-btn {
+    outline: none;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.icon-margin {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 /* ------- header ------ */
+
+header {
+    height: 100vh;
+}
 
 /* nav bar */
 
@@ -57,4 +79,141 @@
 .navbar-menu a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+/* banner */
+
+.banner {
+    background-color: var(--light-pink-color);
+    width: 80%;
+    max-width: 1212px;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.banner-content {
+    padding-left: 48px;
+}
+
+.banner-product-title {
+    font-size: 3rem;
+    color: var(--heading-text-color);
+    margin-bottom: 15px;
+}
+
+.banner-product-description {
+    color: var(--text-color);
+    font-weight: 500 !important;
+    width: 70%;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.banner-product-price {
+    color: var(--pink-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.banner-img {
+    max-width: 402px;
+    padding: 40px 60px;
+}
+
+.buy-now-btn {
+    background: linear-gradient(#FF589B, var(--pink-color));
+}
+
+/* Responsive Media Query */
+/* mobile device */
+
+@media screen and (max-width: 576px) {
+    .nav-bar,
+    .navbar-menu,
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .navbar-menu {
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .banner {
+        width: 80%;
+        text-align: center;
+    }
+
+    .banner-img-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .banner-img {
+        width: 80%;
+    }
+
+    .banner-content {
+        padding-left: 0;
+        margin: 40px auto 10px auto;
+        width: 80%;
+    }
+
+    .banner-product-description {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* tablet device */
+
+@media screen and (min-width: 576px) and (max-width:992px) {
+    .nav-bar,
+    .navbar-menu,
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .navbar-menu {
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .banner {
+        width: 80%;
+        text-align: center;
+    }
+
+    .banner-img-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .banner-img {
+        width: 80%;
+    }
+
+    .banner-content {
+        padding-left: 0;
+        margin: 40px auto 10px auto;
+        width: 80%;
+    }
+
+    .banner-product-description {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
