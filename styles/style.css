@@ -32,10 +32,6 @@
 
 /* ------- header ------ */
 
-header {
-    height: 100vh;
-}
-
 /* nav bar */
 
 .brand-logo {
@@ -127,13 +123,86 @@ header {
     background: linear-gradient(#FF589B, var(--pink-color));
 }
 
+/* ------- main ------- */
+
+/* categories section */
+
+.categories-section {
+    max-width: 1128px;
+    width: 80%;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.category-box {
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 120px;
+    border-radius: 15px;
+}
+
+.category-name {
+    font-size: 2rem;
+}
+
+.img-box {
+    height: 100%;
+    align-items: center;
+}
+
+.category-img {
+    height: 85%;
+}
+
+#box-1 {
+    background: linear-gradient(#FF9C35, #FFD019);
+    flex: 1;
+}
+#box-2 {
+    background: linear-gradient(#FF589B,#FF136F);
+    flex: 1;
+
+}
+#box-3 {
+    background: linear-gradient(#4289FF, #3F07F8);
+    flex: 1;
+}
+
+/* product section */
+
+.product-section {
+    background-color: #F4F4F4;
+}
+
+.product-showcase {
+    max-width: 1128px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.product-detail {
+    justify-content: space-between;
+    justify-items: center;
+    padding: 30px 0;
+}
 /* Responsive Media Query */
 /* mobile device */
 
 @media screen and (max-width: 576px) {
+    
+}
+
+/* mobile and tablet device */
+
+@media screen and (max-width: 992px) {
+
     .nav-bar,
     .navbar-menu,
-    .banner {
+    .banner,
+    .categories-section {
         flex-direction: column;
         justify-content: center;
         gap: 20px;
@@ -159,6 +228,8 @@ header {
 
     .banner-img {
         width: 80%;
+        padding: 0;
+        margin: 20px auto;
     }
 
     .banner-content {
@@ -170,50 +241,15 @@ header {
     .banner-product-description {
         width: 80%;
         margin: 0 auto;
+    }
+
+    .category-box {
+        width: 100%;
     }
 }
 
 /* tablet device */
 
 @media screen and (min-width: 576px) and (max-width:992px) {
-    .nav-bar,
-    .navbar-menu,
-    .banner {
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-    }
 
-    .navbar-menu {
-        text-align: center;
-    }
-
-    .search-bar {
-        width: 80%;
-    }
-
-    .banner {
-        width: 80%;
-        text-align: center;
-    }
-
-    .banner-img-container {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .banner-img {
-        width: 80%;
-    }
-
-    .banner-content {
-        padding-left: 0;
-        margin: 40px auto 10px auto;
-        width: 80%;
-    }
-
-    .banner-product-description {
-        width: 80%;
-        margin: 0 auto;
-    }
 }
